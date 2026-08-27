@@ -1,0 +1,61 @@
+{
+  "version": "1.0",
+  "servers": [
+    {
+      "name": "github-mcp",
+      "description": "Official MCP server for GitHub. Manage repos, issues, PRs.",
+      "runtime": "node",
+      "package": "@modelcontextprotocol/server-github",
+      "homepage": "https://github.com/modelcontextprotocol/servers"
+    },
+    {
+      "name": "filesystem-mcp",
+      "description": "Read, write, and manage files on your local filesystem.",
+      "runtime": "node",
+      "package": "@modelcontextprotocol/server-filesystem",
+      "homepage": "https://github.com/modelcontextprotocol/servers"
+    },
+    {
+      "name": "postgres-mcp",
+      "description": "Query PostgreSQL databases directly from your MCP client.",
+      "runtime": "node",
+      "package": "@modelcontextprotocol/server-postgres",
+      "homepage": "https://github.com/modelcontextprotocol/servers"
+    },
+    {
+      "name": "slack-mcp",
+      "description": "Send messages and read channels in Slack workspaces.",
+      "runtime": "node",
+      "package": "@modelcontextprotocol/server-slack",
+      "homepage": "https://github.com/modelcontextprotocol/servers"
+    },
+    {
+      "name": "brave-search-mcp",
+      "description": "Web search via the Brave Search API.",
+      "runtime": "node",
+      "package": "@modelcontextprotocol/server-brave-search",
+      "homepage": "https://github.com/modelcontextprotocol/servers"
+    },
+    {
+      "name": "sqlite-mcp",
+      "description": "Query and manage SQLite databases.",
+      "runtime": "node",
+      "package": "@modelcontextprotocol/server-sqlite",
+      "homepage": "https://github.com/modelcontextprotocol/servers"
+    },
+    {
+      "name": "google-drive-mcp",
+      "description": "Access and search files in your Google Drive.",
+      "runtime": "node",
+      "package": "@modelcontextprotocol/server-gdrive",
+      "homepage": "https://github.com/modelcontextprotocol/servers"
+    },
+    {
+      "name": "memory-mcp",
+      "description": "Persistent memory / knowledge graph for LLM conversations.",
+      "runtime": "node",
+      "package": "@modelcontextprotocol/server-memory",
+      "homepage": "https://github.com/modelcontextprotocol/servers"
+    }
+  ]
+}
