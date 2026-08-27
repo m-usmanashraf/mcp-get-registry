@@ -2,60 +2,100 @@
   "version": "1.0",
   "servers": [
     {
-      "name": "github-mcp",
-      "description": "Official MCP server for GitHub. Manage repos, issues, PRs.",
-      "runtime": "node",
-      "package": "@modelcontextprotocol/server-github",
-      "homepage": "https://github.com/modelcontextprotocol/servers"
-    },
-    {
-      "name": "filesystem-mcp",
-      "description": "Read, write, and manage files on your local filesystem.",
+      "name": "filesystem",
+      "description": "Read, write, and manage files on your local filesystem. Requires a directory path.",
       "runtime": "node",
       "package": "@modelcontextprotocol/server-filesystem",
-      "homepage": "https://github.com/modelcontextprotocol/servers"
+      "homepage": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem",
+      "requiresConfig": true
     },
     {
-      "name": "postgres-mcp",
-      "description": "Query PostgreSQL databases directly from your MCP client.",
-      "runtime": "node",
-      "package": "@modelcontextprotocol/server-postgres",
-      "homepage": "https://github.com/modelcontextprotocol/servers"
-    },
-    {
-      "name": "slack-mcp",
-      "description": "Send messages and read channels in Slack workspaces.",
-      "runtime": "node",
-      "package": "@modelcontextprotocol/server-slack",
-      "homepage": "https://github.com/modelcontextprotocol/servers"
-    },
-    {
-      "name": "brave-search-mcp",
-      "description": "Web search via the Brave Search API.",
-      "runtime": "node",
-      "package": "@modelcontextprotocol/server-brave-search",
-      "homepage": "https://github.com/modelcontextprotocol/servers"
-    },
-    {
-      "name": "sqlite-mcp",
-      "description": "Query and manage SQLite databases.",
-      "runtime": "node",
-      "package": "@modelcontextprotocol/server-sqlite",
-      "homepage": "https://github.com/modelcontextprotocol/servers"
-    },
-    {
-      "name": "google-drive-mcp",
-      "description": "Access and search files in your Google Drive.",
-      "runtime": "node",
-      "package": "@modelcontextprotocol/server-gdrive",
-      "homepage": "https://github.com/modelcontextprotocol/servers"
-    },
-    {
-      "name": "memory-mcp",
-      "description": "Persistent memory / knowledge graph for LLM conversations.",
+      "name": "memory",
+      "description": "Persistent memory using a local knowledge graph. Gives your LLM long-term memory across chats.",
       "runtime": "node",
       "package": "@modelcontextprotocol/server-memory",
-      "homepage": "https://github.com/modelcontextprotocol/servers"
+      "homepage": "https://github.com/modelcontextprotocol/servers/tree/main/src/memory",
+      "requiresConfig": false
+    },
+    {
+      "name": "sequential-thinking",
+      "description": "Structured multi-step reasoning tool. Helps the model break down complex problems step by step.",
+      "runtime": "node",
+      "package": "@modelcontextprotocol/server-sequential-thinking",
+      "homepage": "https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking",
+      "requiresConfig": false
+    },
+    {
+      "name": "everything",
+      "description": "Reference test server that exercises every MCP feature. Useful for debugging MCP client setups.",
+      "runtime": "node",
+      "package": "@modelcontextprotocol/server-everything",
+      "homepage": "https://github.com/modelcontextprotocol/servers/tree/main/src/everything",
+      "requiresConfig": false
+    },
+    {
+      "name": "fetch",
+      "description": "Fetch web pages and convert them to clean markdown for the LLM to read.",
+      "runtime": "python",
+      "package": "mcp-server-fetch",
+      "homepage": "https://github.com/modelcontextprotocol/servers/tree/main/src/fetch",
+      "requiresConfig": false
+    },
+    {
+      "name": "git",
+      "description": "Read, search, and manipulate local git repositories. Requires a repository path.",
+      "runtime": "python",
+      "package": "mcp-server-git",
+      "homepage": "https://github.com/modelcontextprotocol/servers/tree/main/src/git",
+      "requiresConfig": true
+    },
+    {
+      "name": "time",
+      "description": "Time and timezone conversion. Get the current time in any timezone, convert between them.",
+      "runtime": "python",
+      "package": "mcp-server-time",
+      "homepage": "https://github.com/modelcontextprotocol/servers/tree/main/src/time",
+      "requiresConfig": false
+    },
+    {
+      "name": "context7",
+      "description": "Live, version-specific documentation for any library. Stops the LLM from hallucinating APIs.",
+      "runtime": "node",
+      "package": "@upstash/context7-mcp",
+      "homepage": "https://github.com/upstash/context7",
+      "requiresConfig": false
+    },
+    {
+      "name": "playwright",
+      "description": "Browser automation via Playwright. Let the LLM click, type, and verify pages in a real browser.",
+      "runtime": "node",
+      "package": "@playwright/mcp",
+      "homepage": "https://github.com/microsoft/playwright-mcp",
+      "requiresConfig": false
+    },
+    {
+      "name": "puppeteer",
+      "description": "Browser automation via Puppeteer. Alternative to Playwright, uses Chrome DevTools Protocol.",
+      "runtime": "node",
+      "package": "@modelcontextprotocol/server-puppeteer",
+      "homepage": "https://github.com/modelcontextprotocol/servers-archived/tree/main/src/puppeteer",
+      "requiresConfig": false
+    },
+    {
+      "name": "sqlite",
+      "description": "Query and manage SQLite databases. Requires a database file path.",
+      "runtime": "python",
+      "package": "mcp-server-sqlite",
+      "homepage": "https://github.com/modelcontextprotocol/servers-archived/tree/main/src/sqlite",
+      "requiresConfig": true
+    },
+    {
+      "name": "notion",
+      "description": "Read and write pages in your Notion workspace. Requires a Notion integration token.",
+      "runtime": "node",
+      "package": "@notionhq/notion-mcp-server",
+      "homepage": "https://github.com/makenotion/notion-mcp-server",
+      "requiresConfig": true
     }
   ]
 }
